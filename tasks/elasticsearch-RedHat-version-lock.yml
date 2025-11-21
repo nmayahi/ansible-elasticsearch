@@ -36,12 +36,12 @@
   changed_when: False
   check_mode: False
 
-- name: RedHat - unlock elasticsearch version
-  become: yes
-  shell: yum versionlock delete 0:elasticsearch*
-  args:
-    warn: false
-  when:
-    - not es_version_lock
-    - es_version_locked is defined
-    - es_version_locked.stdout|int > 0
+  #- name: RedHat - unlock elasticsearch version
+  #  become: yes
+  #  shell: yum versionlock delete 0:elasticsearch*
+  #  args:
+  #    warn: false
+  #  when:
+  #    - not es_version_lock
+  #    - es_version_locked is defined
+  #    - es_version_locked.stdout|int > 0
